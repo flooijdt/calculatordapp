@@ -7,6 +7,7 @@ pub mod calculatordapp {
     use anchor_lang::solana_program::entrypoint::ProgramResult;
 
     use super::*;
+    /* Context is a list of the accounts that the function will need */
     pub fn create(ctx: Context<Create>, init_message: String) -> ProgramResult {
         let calculator = &mut ctx.accounts.calculator;
         calculator.greeting = init_message;
