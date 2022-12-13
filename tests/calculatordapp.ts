@@ -31,13 +31,13 @@ describe('calculatordapp', () => {
   })
 
   it('Subtracts one number from another', async () => {
-    await program.rpc.subtract(new anchor.BN(3), new anchor.BN(2), {
+    await program.rpc.subtract(new anchor.BN(2), new anchor.BN(3), {
       accounts: {
         calculator: calculator.publicKey
       }
     })
     const account = await program.account.calculator.fetch(calculator.publicKey);
-    assert.ok(account.result.eq(new anchor.BN(1)));
+    assert.ok(account.result.eq(new anchor.BN(-1)));
   })
 
   it('Multiplys two numbers', async () => {
