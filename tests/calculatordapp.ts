@@ -1,6 +1,6 @@
-const assert = require('assert')
-const anchor = require('@project-serum/anchor')
-const { SystemProgram } = anchor.web3
+const assert = require('assert');
+const anchor = require('@project-serum/anchor');
+const { SystemProgram } = anchor.web3;
 describe('calculatordapp', () => {
   const provider = anchor.AnchorProvider.local();
   anchor.setProvider(provider);
