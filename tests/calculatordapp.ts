@@ -2,8 +2,6 @@ const assert = require('assert')
 const anchor = require('@project-serum/anchor')
 const { SystemProgram } = anchor.web3
 describe('calculatordapp', () => {
-  /* Why on earth this const declaration ends with ';',
-   but the next one ends without ';'? */
   const provider = anchor.AnchorProvider.local();
   anchor.setProvider(provider);
   const calculator = anchor.web3.Keypair.generate();
